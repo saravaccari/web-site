@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touring | Moto Travel Trentino</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header-solid">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <img src="/images/logo-mtt.png" alt="Moto Travel Trentino" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="/touring.html" class="active">Touring</a></li>
+                    <li><a href="/formazione.html">Formazione</a></li>
+                    <li><a href="/webapp.html">Web App</a></li>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="/contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section-center" style="padding-bottom: 0;">
+            <div class="container fade-up">
+                <div class="badge-outline">ESPERIENZE PREMIUM</div>
+                <h2>Itinerari disegnati per<br><span class="text-rame italic">mototuristi esigenti.</span></h2>
+                <p class="subtitle">Percorsi strutturati, testati e replicabili. Il meglio del Trentino Alto Adige e dell'Europa, con standard d'eccellenza.</p>
+            </div>
+        </section>
+
+        <section style="padding-top: 0;">
+            <div class="container fade-up">
+                <div class="featured-tour">
+                    <img src="https://picsum.photos/seed/dolomiti-road/1200/600" 
+                         srcset="https://picsum.photos/seed/dolomiti-road/600/300 600w, https://picsum.photos/seed/dolomiti-road/1200/600 1200w, https://picsum.photos/seed/dolomiti-road/1800/900 1800w"
+                         sizes="100vw"
+                         alt="Trans-Dolomitica Premium" class="featured-tour-bg" fetchpriority="high">
+                    <div class="featured-tour-overlay"></div>
+                    <div class="featured-tour-content">
+                        <div class="featured-tour-text">
+                            <div class="featured-tour-tag">⭐ TOUR IN EVIDENZA</div>
+                            <h3>Trans-Dolomitica Premium</h3>
+                            <p>5 giorni di guida immersiva attraverso i paesaggi patrimonio UNESCO, con pernottamenti in strutture 4 stelle selezionate.</p>
+                            <a href="/punto-di-vista.html" style="color: var(--rame); font-size: 1rem; font-weight: 600; margin-top: 16px; display: inline-block; text-decoration: none;">&rarr; Il nostro punto di vista</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-accent">📥 Scarica Percorso GPS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-filters-header fade-up">
+                    <h2 class="tour-section-title">Tutti gli Itinerari</h2>
+                    <div class="tour-filters">
+                        <div class="filter-group">
+                            <select id="filter-difficulty" class="filter-select">
+                                <option value="all">Difficoltà: Tutte</option>
+                                <option value="facile">Facile</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="avanzato">Avanzato</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="filter-duration" class="filter-select">
+                                <option value="all">Durata: Tutte</option>
+                                <option value="1">1 Giorno</option>
+                                <option value="2">2 Giorni</option>
+                                <option value="3">3+ Giorni</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="filter-type" class="filter-select">
+                                <option value="all">Tipo: Tutti</option>
+                                <option value="passi-alpini">Passi Alpini</option>
+                                <option value="laghi">Laghi</option>
+                                <option value="tecnico">Tecnico</option>
+                                <option value="relax">Relax</option>
+                                <option value="enogastronomico">Enogastronomico</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-2" id="tour-grid">
+                    <!-- Card 1 -->
+                    <div class="tour-card fade-up" data-difficulty="intermedio" data-duration="3" data-type="passi-alpini panoramico asfalto-perfetto">
+                        <div class="tour-card-header">
+                            <h3>Il Grande Anello delle Dolomiti</h3>
+                            <span class="tour-difficulty">Intermedio</span>
+                        </div>
+                        <p>Un percorso mozzafiato attraverso i passi più celebri: Sella, Pordoi, Gardena. Pensato per godere ogni singola curva.</p>
+                        <a href="/punto-di-vista.html" style="color: var(--rame); font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; display: inline-block; text-decoration: none;">&rarr; Il nostro punto di vista</a>
+                        <div class="tour-tags">
+                            <span class="tour-tag">Passi Alpini</span>
+                            <span class="tour-tag">Panoramico</span>
+                            <span class="tour-tag">Asfalto Perfetto</span>
+                        </div>
+                        <div class="tour-divider"></div>
+                        <div class="tour-footer">
+                            <div class="tour-stats">
+                                📍 450 km <span>|</span> 3 Giorni
+                            </div>
+                            <a href="#" class="tour-link">Scarica GPS</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="tour-card fade-up" style="transition-delay: 0.1s;" data-difficulty="facile" data-duration="2" data-type="laghi relax enogastronomico">
+                        <div class="tour-card-header">
+                            <h3>I Laghi del Trentino</h3>
+                            <span class="tour-difficulty">Facile</span>
+                        </div>
+                        <p>Itinerario rilassante che collega il Lago di Garda, Molveno e Tenno. Ideale per weekend in coppia.</p>
+                        <a href="/punto-di-vista.html" style="color: var(--rame); font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; display: inline-block; text-decoration: none;">&rarr; Il nostro punto di vista</a>
+                        <div class="tour-tags">
+                            <span class="tour-tag">Laghi</span>
+                            <span class="tour-tag">Relax</span>
+                            <span class="tour-tag">Enogastronomico</span>
+                        </div>
+                        <div class="tour-divider"></div>
+                        <div class="tour-footer">
+                            <div class="tour-stats">
+                                📍 280 km <span>|</span> 2 Giorni
+                            </div>
+                            <a href="#" class="tour-link">Scarica GPS</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="tour-card fade-up" data-difficulty="avanzato" data-duration="1" data-type="tecnico alta-quota sfida">
+                        <div class="tour-card-header">
+                            <h3>Sfida dello Stelvio</h3>
+                            <span class="tour-difficulty">Avanzato</span>
+                        </div>
+                        <p>Il passo iconico affrontato dai versanti più tecnici. Un must per ogni mototurista europeo.</p>
+                        <a href="/punto-di-vista.html" style="color: var(--rame); font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; display: inline-block; text-decoration: none;">&rarr; Il nostro punto di vista</a>
+                        <div class="tour-tags">
+                            <span class="tour-tag">Tecnico</span>
+                            <span class="tour-tag">Alta Quota</span>
+                            <span class="tour-tag">Sfida</span>
+                        </div>
+                        <div class="tour-divider"></div>
+                        <div class="tour-footer">
+                            <div class="tour-stats">
+                                📍 180 km <span>|</span> 1 Giorno
+                            </div>
+                            <a href="#" class="tour-link">Scarica GPS</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="tour-card fade-up" style="transition-delay: 0.1s;" data-difficulty="facile" data-duration="2" data-type="degustazioni colline premium enogastronomico">
+                        <div class="tour-card-header">
+                            <h3>Strada del Vino e delle Curve</h3>
+                            <span class="tour-difficulty">Facile</span>
+                        </div>
+                        <p>Un connubio perfetto tra la guida in collina e le soste nelle migliori cantine dell'Alto Adige.</p>
+                        <a href="/punto-di-vista.html" style="color: var(--rame); font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; display: inline-block; text-decoration: none;">&rarr; Il nostro punto di vista</a>
+                        <div class="tour-tags">
+                            <span class="tour-tag">Degustazioni</span>
+                            <span class="tour-tag">Colline</span>
+                            <span class="tour-tag">Premium</span>
+                        </div>
+                        <div class="tour-divider"></div>
+                        <div class="tour-footer">
+                            <div class="tour-stats">
+                                📍 320 km <span>|</span> 2 Giorni
+                            </div>
+                            <a href="#" class="tour-link">Scarica GPS</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="no-results-message" style="display: none; text-align: center; padding: 48px 0; color: var(--grigio-t);">
+                    <p>Nessun itinerario trovato con i filtri selezionati.</p>
+                    <button id="reset-filters" class="btn btn-outline-dark" style="margin-top: 16px;">Reimposta Filtri</button>
+                </div>
+
+                <div class="fade-up" style="background-color: var(--antracite); border-radius: 32px; padding: 64px; margin: 80px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px; box-shadow: 0 16px 32px rgba(0,0,0,0.1);">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 12px; color: var(--bianco);">Mappa Motoclub FMI</h3>
+                        <p style="color: rgba(246, 243, 236, 0.8); line-height: 1.6; margin: 0; max-width: 600px; font-size: 1.125rem;">Consulta la mappa ufficiale della Federazione Motociclistica Italiana per scoprire i motoclub attivi lungo il tuo percorso. Un punto di riferimento essenziale per ogni mototurista.</p>
+                    </div>
+                    <div>
+                        <a href="https://www.federmoto.it/motoclub/?mappa=1" target="_blank" rel="noopener noreferrer" style="color: var(--rame); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.125rem; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                            Esplora la mappa
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bottom-cta fade-up">
+                    <p>Vuoi organizzare un tour su misura per il tuo motoclub?</p>
+                    <a href="/contatti.html" class="btn btn-outline-dark">Contattaci per Tour Personalizzati</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Moto <span class="text-rame">Travel</span> Trentino</h3>
+                    <p>Formazione d'eccellenza per presidenti di motoclub e itinerari strutturati per il mototurismo europeo alto-spendente.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="/formazione.html">Formazione</a></li>
+                        <li><a href="/touring.html">Itinerari</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Web App</h4>
+                    <ul>
+                        <li><a href="/webapp.html#adminiu">Adminiu</a></li>
+                        <li><a href="/webapp.html#eventium">Eventium</a></li>
+                        <li><a href="/webapp.html#registra">Registra</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Azienda</h4>
+                    <ul>
+                        <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="/chi-siamo.html#mission">Mission e Valori</a></li>
+                        <li><a href="/contatti.html">Contatti</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Moto Travel Trentino. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script type="module" src="/src/chatbot.ts"></script>
+</body>
+</html>

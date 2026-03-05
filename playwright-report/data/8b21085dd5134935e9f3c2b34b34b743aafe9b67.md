@@ -1,0 +1,100 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "MOTO TRAVEL TRENTINO" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "Chi Siamo" [ref=e10] [cursor=pointer]:
+              - /url: /chi-siamo.html
+          - listitem [ref=e11]:
+            - link "Touring" [ref=e12] [cursor=pointer]:
+              - /url: /touring.html
+          - listitem [ref=e13]:
+            - link "Formazione" [ref=e14] [cursor=pointer]:
+              - /url: /formazione.html
+          - listitem [ref=e15]:
+            - link "Web App" [ref=e16] [cursor=pointer]:
+              - /url: /webapp.html
+          - listitem [ref=e17]:
+            - link "News" [ref=e18] [cursor=pointer]:
+              - /url: /news.html
+      - generic [ref=e19]:
+        - button "Cerca" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - link "Contattaci →" [ref=e24] [cursor=pointer]:
+          - /url: /contatti.html
+  - main [ref=e25]:
+    - generic [ref=e27]:
+      - heading "La nostra Visione." [level=2] [ref=e28]
+      - paragraph [ref=e29]: Elevare lo standard del mototurismo e della gestione associativa attraverso competenza, innovazione e passione per il territorio.
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - heading "Mission" [level=3] [ref=e34]
+        - paragraph [ref=e35]: Fornire ai Presidenti di Motoclub gli strumenti formativi e tecnologici necessari per una governance impeccabile, offrendo al contempo esperienze di viaggio indimenticabili in Trentino Alto Adige.
+      - generic [ref=e36]:
+        - heading "Valori" [level=3] [ref=e37]
+        - paragraph [ref=e38]: Eccellenza, trasparenza, innovazione digitale e profondo rispetto per il territorio dolomitico. Crediamo in un mototurismo consapevole e di alto livello.
+    - generic [ref=e40]:
+      - heading "La nostra Storia" [level=2] [ref=e41]
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: "Nata dalla passione per le due ruote e dall'esperienza decennale nella gestione associativa, Moto Travel Trentino ha riconosciuto una lacuna nel settore: la mancanza di professionalizzazione nella governance dei motoclub e l'assenza di servizi premium per mototuristi esigenti."
+        - paragraph [ref=e44]: Oggi, uniamo la bellezza mozzafiato delle Dolomiti con soluzioni all'avanguardia per la formazione e la gestione, creando un ecosistema unico nel panorama europeo.
+  - contentinfo [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - heading "Moto Travel Trentino" [level=3] [ref=e49]
+          - paragraph [ref=e50]: Formazione d'eccellenza per presidenti di motoclub e itinerari strutturati per il mototurismo europeo alto-spendente.
+        - generic [ref=e51]:
+          - heading "Servizi" [level=4] [ref=e52]
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - link "Formazione" [ref=e55] [cursor=pointer]:
+                - /url: /formazione.html
+            - listitem [ref=e56]:
+              - link "Itinerari" [ref=e57] [cursor=pointer]:
+                - /url: /touring.html
+            - listitem [ref=e58]:
+              - link "FAQ" [ref=e59] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e60]:
+          - heading "Web App" [level=4] [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - link "Adminiu" [ref=e64] [cursor=pointer]:
+                - /url: /webapp.html#adminiu
+            - listitem [ref=e65]:
+              - link "Eventium" [ref=e66] [cursor=pointer]:
+                - /url: /webapp.html#eventium
+            - listitem [ref=e67]:
+              - link "Registra" [ref=e68] [cursor=pointer]:
+                - /url: /webapp.html#registra
+        - generic [ref=e69]:
+          - heading "Azienda" [level=4] [ref=e70]
+          - list [ref=e71]:
+            - listitem [ref=e72]:
+              - link "Chi Siamo" [ref=e73] [cursor=pointer]:
+                - /url: /chi-siamo.html
+            - listitem [ref=e74]:
+              - link "Mission e Valori" [ref=e75] [cursor=pointer]:
+                - /url: /chi-siamo.html#mission
+            - listitem [ref=e76]:
+              - link "Contatti" [ref=e77] [cursor=pointer]:
+                - /url: /contatti.html
+            - listitem [ref=e78]:
+              - link "Privacy Policy" [ref=e79] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e80]:
+              - link "Cookie Policy" [ref=e81] [cursor=pointer]:
+                - /url: "#"
+      - paragraph [ref=e83]: © 2026 Moto Travel Trentino. Tutti i diritti riservati.
+  - img [ref=e85] [cursor=pointer]
+```

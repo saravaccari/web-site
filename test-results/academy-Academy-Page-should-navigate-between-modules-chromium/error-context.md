@@ -1,0 +1,145 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "MOTO TRAVEL TRENTINO" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "Chi Siamo" [ref=e10] [cursor=pointer]:
+              - /url: /chi-siamo.html
+          - listitem [ref=e11]:
+            - link "Touring" [ref=e12] [cursor=pointer]:
+              - /url: /touring.html
+          - listitem [ref=e13]:
+            - link "Formazione" [ref=e14] [cursor=pointer]:
+              - /url: /formazione.html
+          - listitem [ref=e15]:
+            - link "Web App" [ref=e16] [cursor=pointer]:
+              - /url: /webapp.html
+          - listitem [ref=e17]:
+            - link "News" [ref=e18] [cursor=pointer]:
+              - /url: /news.html
+      - link "Contattaci →" [ref=e20] [cursor=pointer]:
+        - /url: /contatti.html
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "Academy Presidenti" [level=1] [ref=e26]
+          - paragraph [ref=e27]: Percorso formativo per la governance d'eccellenza.
+        - generic [ref=e29]:
+          - generic [ref=e30]: Progresso Corso
+          - generic [ref=e31]: 0%
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - heading "Moduli del Corso" [level=3] [ref=e37]:
+            - img [ref=e38]
+            - text: Moduli del Corso
+          - generic [ref=e40]:
+            - button "Modulo 1 Responsabilità Legale del Presidente 45 min" [ref=e41]:
+              - img [ref=e43]
+              - generic [ref=e45]:
+                - generic [ref=e46]: Modulo 1
+                - generic [ref=e47]: Responsabilità Legale del Presidente
+                - generic [ref=e48]:
+                  - img [ref=e49]
+                  - text: 45 min
+            - button "Modulo 2 Fiscalità e Finanza del Terzo Settore 60 min" [active] [ref=e52]:
+              - img [ref=e54]
+              - generic [ref=e57]:
+                - generic [ref=e58]: Modulo 2
+                - generic [ref=e59]: Fiscalità e Finanza del Terzo Settore
+                - generic [ref=e60]:
+                  - img [ref=e61]
+                  - text: 60 min
+            - button "Modulo 3 Governance e Gestione Soci 50 min" [ref=e64]:
+              - img [ref=e66]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Modulo 3
+                - generic [ref=e73]: Governance e Gestione Soci
+                - generic [ref=e74]:
+                  - img [ref=e75]
+                  - text: 50 min
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - text: Modulo 2
+            - heading "Fiscalità e Finanza del Terzo Settore" [level=1] [ref=e85]
+          - generic [ref=e87]:
+            - heading "Gestione Fiscale e Finanziaria" [level=2] [ref=e88]
+            - paragraph [ref=e89]: La riforma del Terzo Settore ha introdotto importanti novità per le associazioni sportive dilettantistiche (ASD) e gli enti del terzo settore (ETS). Comprendere queste regole è vitale per evitare sanzioni e gestire le risorse in modo efficiente.
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - heading "Entrate Istituzionali" [level=4] [ref=e92]
+                - paragraph [ref=e93]: Quote associative, contributi liberali e donazioni. Come registrarle correttamente a bilancio.
+              - generic [ref=e94]:
+                - heading "Attività Commerciali" [level=4] [ref=e95]
+                - paragraph [ref=e96]: Sponsorizzazioni, vendita di merchandising e somministrazione alimenti. Limiti e tassazione.
+            - heading "Il Rendiconto Annuale" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Ogni Motoclub deve redigere un rendiconto economico e finanziario annuale. Ti guideremo passo dopo passo nella creazione di un bilancio trasparente e conforme alle normative vigent, da presentare all'assemblea dei soci.
+          - generic [ref=e99]:
+            - button "Segna come Completato" [ref=e100]:
+              - img [ref=e101]
+              - text: Segna come Completato
+            - button "Prossimo Modulo" [ref=e104]:
+              - text: Prossimo Modulo
+              - img [ref=e105]
+  - contentinfo [ref=e107]:
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - heading "Moto Travel Trentino" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Formazione d'eccellenza per presidenti di motoclub e itinerari strutturati per il mototurismo europeo alto-spendente.
+        - generic [ref=e113]:
+          - heading "Servizi" [level=4] [ref=e114]
+          - list [ref=e115]:
+            - listitem [ref=e116]:
+              - link "Formazione" [ref=e117] [cursor=pointer]:
+                - /url: /formazione.html
+            - listitem [ref=e118]:
+              - link "Itinerari" [ref=e119] [cursor=pointer]:
+                - /url: /touring.html
+            - listitem [ref=e120]:
+              - link "FAQ" [ref=e121] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e122]:
+          - heading "Web App" [level=4] [ref=e123]
+          - list [ref=e124]:
+            - listitem [ref=e125]:
+              - link "Adminiu" [ref=e126] [cursor=pointer]:
+                - /url: /webapp.html#adminiu
+            - listitem [ref=e127]:
+              - link "Eventium" [ref=e128] [cursor=pointer]:
+                - /url: /webapp.html#eventium
+            - listitem [ref=e129]:
+              - link "Registra" [ref=e130] [cursor=pointer]:
+                - /url: /webapp.html#registra
+        - generic [ref=e131]:
+          - heading "Azienda" [level=4] [ref=e132]
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - link "Chi Siamo" [ref=e135] [cursor=pointer]:
+                - /url: /chi-siamo.html
+            - listitem [ref=e136]:
+              - link "Mission e Valori" [ref=e137] [cursor=pointer]:
+                - /url: /chi-siamo.html#mission
+            - listitem [ref=e138]:
+              - link "Contatti" [ref=e139] [cursor=pointer]:
+                - /url: /contatti.html
+            - listitem [ref=e140]:
+              - link "Privacy Policy" [ref=e141] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e142]:
+              - link "Cookie Policy" [ref=e143] [cursor=pointer]:
+                - /url: "#"
+      - paragraph [ref=e145]: © 2026 Moto Travel Trentino. Tutti i diritti riservati.
+  - img [ref=e147] [cursor=pointer]
+```
