@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (moduleSections.length > 0 && sidebarLinks.length > 0) {
     const observerOptions = {
       root: null,
-      rootMargin: '-150px 0px -60% 0px',
+      rootMargin: '-250px 0px -60% 0px',
       threshold: 0
     };
 
