@@ -12,14 +12,4 @@ test.describe('Home Page', () => {
     await expect(page).toHaveURL(/\/chi-siamo.html/);
     await expect(page.locator('h2').first()).toContainText(/Visione/);
   });
-
-  test('should open the chatbot', async ({ page }) => {
-    await page.goto('/');
-    const trigger = page.locator('#chatbot-trigger');
-    await expect(trigger).toBeVisible();
-    await trigger.click();
-    
-    const window = page.locator('#chatbot-window');
-    await expect(window).toHaveClass(/active/);
-  });
 });
