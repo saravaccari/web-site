@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterDifficulty = document.getElementById('filter-difficulty');
   const filterDuration = document.getElementById('filter-duration');
   const filterType = document.getElementById('filter-type');
+  const tourSearch = document.getElementById('tour-search');
   const tourCards = document.querySelectorAll('.tour-card');
   const noResultsMessage = document.getElementById('no-results-message');
   const resetFiltersBtn = document.getElementById('reset-filters');
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const difficultyVal = filterDifficulty.value;
     const durationVal = filterDuration.value;
     const typeVal = filterType.value;
+    const searchVal = tourSearch ? tourSearch.value.toLowerCase().trim() : '';
 
     let visibleCount = 0;
 
@@ -107,12 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardDifficulty = card.getAttribute('data-difficulty');
       const cardDuration = card.getAttribute('data-duration');
       const cardType = card.getAttribute('data-type');
+      const cardText = card.textContent.toLowerCase();
 
       const matchDifficulty = difficultyVal === 'all' || cardDifficulty === difficultyVal;
       const matchDuration = durationVal === 'all' || cardDuration === durationVal || (durationVal === '3' && parseInt(cardDuration) >= 3);
       const matchType = typeVal === 'all' || cardType.includes(typeVal);
+      const matchSearch = searchVal === '' || cardText.includes(searchVal);
 
-      if (matchDifficulty && matchDuration && matchType) {
+      if (matchDifficulty && matchDuration && matchType && matchSearch) {
         card.style.display = 'flex';
         // Reset animation for visible cards
         card.classList.remove('visible');
@@ -134,12 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filterDifficulty) filterDifficulty.addEventListener('change', filterTours);
   if (filterDuration) filterDuration.addEventListener('change', filterTours);
   if (filterType) filterType.addEventListener('change', filterTours);
+  if (tourSearch) tourSearch.addEventListener('input', filterTours);
 
   if (resetFiltersBtn) {
     resetFiltersBtn.addEventListener('click', () => {
       filterDifficulty.value = 'all';
       filterDuration.value = 'all';
       filterType.value = 'all';
+      if (tourSearch) tourSearch.value = '';
       filterTours();
     });
   }

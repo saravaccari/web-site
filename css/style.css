@@ -123,11 +123,13 @@ header.scrolled .header-content, header.header-solid .header-content {
   width: auto;
   transition: all 0.4s ease;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+  content: url("/images/logo-mtt-footer.svg");
 }
 
 header.scrolled .logo-img, header.header-solid .logo-img {
   height: 60px;
   filter: none;
+  content: url("/images/logo-mtt.svg");
 }
 
 nav ul {
@@ -517,6 +519,13 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
   color: var(--bianco);
   font-size: 1.5rem;
   margin-bottom: 16px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 24px;
+  display: block;
 }
 
 .footer-brand p {
