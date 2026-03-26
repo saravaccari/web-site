@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-up').forEach(el => {
+  document.querySelectorAll('.fade-up, .card-reveal').forEach(el => {
     observer.observe(el);
   });
 
@@ -212,4 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(section);
     });
   }
+
+  // Scroll to Top Button
+  const scrollToTopBtn = document.createElement('button');
+  scrollToTopBtn.className = 'scroll-to-top';
+  scrollToTopBtn.setAttribute('aria-label', 'Torna all\'inizio');
+  scrollToTopBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+  document.body.appendChild(scrollToTopBtn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });

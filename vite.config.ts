@@ -28,7 +28,6 @@ export default defineConfig(({mode}) => {
           touring: path.resolve(__dirname, 'touring.html'),
           formazione: path.resolve(__dirname, 'formazione.html'),
           webapp: path.resolve(__dirname, 'webapp.html'),
-          news: path.resolve(__dirname, 'news.html'),
           contatti: path.resolve(__dirname, 'contatti.html'),
           puntoDiVista: path.resolve(__dirname, 'punto-di-vista.html'),
           moduliFormativi: path.resolve(__dirname, 'moduli-formativi.html'),

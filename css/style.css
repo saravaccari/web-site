@@ -284,8 +284,32 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
 /* Grid */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
 
 /* Animations */
+@keyframes cardRevealAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-reveal {
+  opacity: 0;
+}
+
+.card-reveal.visible {
+  animation: cardRevealAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(14px);
@@ -297,7 +321,81 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
   transform: translateY(0);
 }
 
-/* Hero Section */
+/* Bento App Cards */
+.bento-app-card {
+  border-radius: 32px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.bento-app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+}
+
+.bento-bg-icon {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+  transform: rotate(-10deg);
+}
+
+.bento-app-card h3,
+.bento-app-card p,
+.bento-app-card .app-features,
+.bento-app-action {
+  position: relative;
+  z-index: 1;
+}
+
+.bento-app-card h3 {
+  font-size: 1.5rem;
+  color: var(--antracite);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.bento-app-card p {
+  color: var(--grigio-t);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.bento-app-card .app-features {
+  margin-bottom: 32px;
+}
+
+.bento-app-action {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.bento-app-action:hover {
+  transform: scale(1.1);
+}
+
 .hero-image {
   min-height: 100vh;
   display: flex;
@@ -305,7 +403,7 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
   justify-content: center;
   text-align: center;
   padding-top: 240px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000');
   background-size: cover;
   background-position: center;
   color: var(--bianco);
@@ -422,6 +520,67 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
   padding: 60px 0 120px;
 }
 
+/* Service Cards (New Design) */
+.service-card {
+  border-radius: 24px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  background-color: var(--bianco);
+  color: var(--antracite);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--rame);
+  color: #ffffff;
+  box-shadow: 0 24px 48px rgba(183, 90, 42, 0.2);
+}
+
+.service-card-number {
+  align-self: flex-end;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 60px;
+  color: var(--antracite);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-card-number {
+  color: #ffffff;
+}
+
+.service-card h3 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--antracite);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #ffffff;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--grigio-t);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .card {
   padding: 0;
   overflow: hidden;
@@ -507,6 +666,95 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
 .site-footer {
   background-color: var(--antracite);
   padding: 80px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer .container {
+  position: relative;
+  z-index: 10;
+}
+
+.footer-world-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-world-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(200vw, 2400px);
+  height: max(100vw, 1200px);
+  transform: translate(-51.5%, -33.5%); /* Regolato per spostare il puntatore più a sinistra e in basso */
+  background-color: rgba(255, 255, 255, 0.06);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 10px 10px;
+  mask-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+  mask-size: 100% 100%;
+  -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+  -webkit-mask-size: 100% 100%;
+  opacity: 0.6; /* Più visibile ma dietro al testo */
+}
+
+.footer-highlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.highlight-pulse {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(183, 90, 42, 0.6) 0%, rgba(183, 90, 42, 0) 70%);
+  border-radius: 50%;
+  animation: pulse 3s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.highlight-dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: var(--rame);
+  border: 3px solid var(--antracite);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(183, 90, 42, 1);
+}
+
+.highlight-label {
+  position: absolute;
+  top: 100%;
+  margin-top: 16px;
+  color: var(--bianco);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  background: rgba(48, 48, 48, 0.7);
+  padding: 4px 12px;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  opacity: 0.9;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.2); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
 }
 
 .footer-grid {
@@ -642,10 +890,27 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
 /* Mobile */
 @media (max-width: 768px) {
   .hero-image h1 { font-size: 3rem; }
-  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 24px;
+  }
+
   nav {
-    display: none;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  
+  nav ul {
+    display: flex;
+    width: max-content;
+    gap: 24px;
   }
   
   .footer-grid {
@@ -667,6 +932,7 @@ nav a:hover, header.scrolled nav a:hover, header.header-solid nav a.active {
     font-size: 2.5rem;
   }
 }
+
 
 /* Split Section Styles */
 .section-split {
@@ -1998,4 +2264,222 @@ textarea.form-control {
   .modules-content {
     gap: 48px;
   }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--rame);
+  color: var(--bianco);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--antracite);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 24px;
+    right: 24px;
+  }
+}
+
+/* --- NEW TOUR CARD DESIGN --- */
+.tour-card-new {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.tour-card-new:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.tour-card-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.tour-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.tour-card-image-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.tour-badge {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.tour-like-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease;
+}
+
+.tour-like-btn:hover {
+  background: #fff;
+}
+
+.tour-card-image-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tour-card-title-area h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.tour-card-title-area p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tour-start-btn {
+  background: var(--rame);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.tour-start-btn:hover {
+  background: var(--antracite);
+}
+
+.tour-calendar-btn {
+  background: transparent;
+  color: var(--rame);
+  padding: 12px 20px;
+  border: 1px solid var(--rame);
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tour-calendar-btn:hover {
+  background: var(--rame);
+  color: #fff;
+}
+
+.tour-card-details {
+  display: flex;
+  gap: 20px;
+  padding: 0 8px 8px 8px;
+}
+
+.tour-card-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .tour-card-image-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .tour-start-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Grid 2 specific adjustments for tour cards */
+.grid-2 .tour-card-image {
+  height: 280px;
 }
